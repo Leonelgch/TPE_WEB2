@@ -4,9 +4,7 @@ class ViewJugadores {
     
     public function showJugador($jugador) {
      
-        include "templates/header.php"; ?>
-
-        <?php
+        include "templates/header.php"; 
 
         if ($jugador) { ?>
             <!-- mx-auto m es el margen la x el eje horizontal -->
@@ -25,8 +23,8 @@ class ViewJugadores {
             </div>
         <?php
         }
-        ?>
-    <?php include "templates/footer.php";
+        
+     include "templates/footer.php";
     }
 
 }

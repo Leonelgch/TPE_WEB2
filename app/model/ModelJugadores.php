@@ -1,4 +1,5 @@
 <?php
+require_once('app/model/Model.php');
 
 class ModelJugadores extends Model{
     
@@ -19,7 +20,7 @@ class ModelJugadores extends Model{
     {
         $db = $this->getPDO(); // Abrimos  una conexión
 
-        $sentencia = $db->prepare("SELECT * FROM jugador WHERE id = ?");
+        $sentencia = $db->prepare("SELECT * FROM jugador WHERE id_jugador = ?");
         $sentencia->execute([$id]); // Ejecutamos la consulta
 
         $jugador = $sentencia->fetch(PDO::FETCH_OBJ); // Obtenemos los datos (para generar el HTML)

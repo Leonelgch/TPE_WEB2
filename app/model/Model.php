@@ -28,7 +28,4 @@ private $pdo;
     function getPDO(){
         return $this->pdo;
     }
-
-
-
 }

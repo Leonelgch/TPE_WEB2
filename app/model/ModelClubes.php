@@ -1,7 +1,8 @@
 <?php
+require_once('app/model/Model.php');
+class ModelClubes extends Model
+{
 
-class ModelClubes extends Model {
-    
     private $db;
 
     function all()
@@ -19,11 +20,10 @@ class ModelClubes extends Model {
     {
         $db = $this->getPDO(); // Abrimos  una conexión
 
-        $sentencia = $db->prepare("SELECT * FROM club WHERE id = ?");
+        $sentencia = $db->prepare("SELECT * FROM club WHERE id_club = ?");
         $sentencia->execute([$id]); // Ejecutamos la consulta
 
         $club = $sentencia->fetch(PDO::FETCH_OBJ); // Obtenemos los datos (para generar el HTML)
         return $club;
     }
-
 }

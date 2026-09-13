@@ -29,5 +29,5 @@ switch ($parametros[0]) {
             $controllerDev->getDevsById(1);
         break;*/
         case 'jugadores': $controllerJugador->getJugadorById($parametros[1]) ; break;
-
+        default: 'home'; break;
 }
